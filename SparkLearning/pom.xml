@@ -11,8 +11,7 @@
     <modelVersion>4.0.0</modelVersion>
     <artifactId>SparkLearning</artifactId>
     <packaging>war</packaging>
-    <name>A custom project using myfaces</name>
-    <url>http://www.myorganization.org</url>
+    <name>SparkLearning</name>
 
     <build>
         <finalName>SparkLearning</finalName>
@@ -22,17 +21,11 @@
 
 
     <repositories>
-
-        <repository>
-            <releases>
-                <enabled>false</enabled>
-            </releases>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-            <id>apache-maven-snapshots</id>
-            <url>http://people.apache.org/repo/m2-snapshot-repository</url>
-        </repository>
+        <repository>  
+                <id>alimaven</id>
+                <name>aliyun maven</name>
+                <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+        </repository> 
     </repositories>
 
     <!-- Project dependencies -->
