@@ -44,30 +44,6 @@
 
   <build>
     <defaultGoal>install</defaultGoal>
-    <!-- 默认源代码和资源文件目录配置 -->
-    <resources>
-      <resource>
-        <directory>${project.basedir}/src/main/java</directory>
-      </resource>
-      <resource>
-        <directory>${project.basedir}/src/main/scala</directory>
-      </resource>
-      <resource>
-        <directory>${project.basedir}/src/main/resources</directory>
-      </resource>
-    </resources>
-    <testResources>
-      <testResource>
-        <directory>${project.basedir}/src/test/java</directory>
-      </testResource>
-      <testResource>
-        <directory>${project.basedir}/src/test/scala</directory>
-      </testResource>
-      <testResource>
-        <directory>${project.basedir}/src/test/resources</directory>
-      </testResource>
-    </testResources>
-
     <!--        <finalName>lexus-udf-0.1.jar</finalName>-->
 
     <pluginManagement>

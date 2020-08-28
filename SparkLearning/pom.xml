@@ -17,8 +17,17 @@
     <build>
         <finalName>SparkLearning</finalName>
         <sourceDirectory>src/main</sourceDirectory>
+<!--        <resources>-->
+<!--            <resource>-->
+<!--                <directory>src/main/resources</directory>-->
+<!--            </resource>-->
+<!--        </resources>-->
         <testSourceDirectory>src/test</testSourceDirectory>
     </build>
+
+    <properties>
+        <spark.version>2.4.6</spark.version>
+    </properties>
 
 
     <repositories>
@@ -39,10 +48,16 @@
     <dependencies>
         <dependency>
             <groupId>org.apache.spark</groupId>
-            <artifactId>spark-core_2.11</artifactId>
-            <version>2.0.0</version>
+            <artifactId>spark-core_2.12</artifactId>
+            <version>${spark.version}</version>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/org.apache.spark/spark-sql -->
+        <dependency>
+            <groupId>org.apache.spark</groupId>
+            <artifactId>spark-sql_2.12</artifactId>
+            <version>${spark.version}</version>
+        </dependency>
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
