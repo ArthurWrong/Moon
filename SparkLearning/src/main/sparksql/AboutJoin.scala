@@ -25,11 +25,11 @@ object AboutJoin {
     val students = ss
       .read
       .option("header", "true")
-      .csv("D:\\Code\\Moon\\SparkLearning\\src\\main\\resources\\students.csv")
+      .csv("SparkLearning/src/main/resources/classes.csv")
     val classes = ss
       .read
       .option("header", "true")
-      .csv("D:\\Code\\Moon\\SparkLearning\\src\\main\\resources\\classes.csv")
+      .csv("SparkLearning/src/main/resources/students.csv")
     val res = students.join(
       classes, Seq("class"), "full"
     )
