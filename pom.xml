@@ -11,6 +11,7 @@
     <module>SparkLearning</module>
     <module>UDF</module>
     <module>JavaSelf</module>
+    <module>DeltaLakeLearning</module>
   </modules>
 
   <name>JavaLearning</name>
@@ -48,6 +49,31 @@
 
     <pluginManagement>
       <plugins>
+        <plugin>
+          <groupId>org.scala-tools</groupId>
+          <artifactId>maven-scala-plugin</artifactId>
+          <version>2.15.2</version>
+          <executions>
+            <execution>
+              <id>scala-compile-first</id>
+              <goals>
+                <goal>compile</goal>
+              </goals>
+              <configuration>
+                <includes>
+                  <include>**/*.scala</include>
+                </includes>
+              </configuration>
+            </execution>
+            <execution>
+              <id>scala-test-compile</id>
+              <goals>
+                <goal>testCompile</goal>
+              </goals>
+            </execution>
+          </executions>
+        </plugin>
+
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-compiler-plugin</artifactId>
@@ -92,6 +118,20 @@
         </plugin>
       </plugins>
     </pluginManagement>
+
+    <sourceDirectory>src/main</sourceDirectory>
+    <resources>
+      <resource>
+        <directory>src/main/resources</directory>
+      </resource>
+    </resources>
+    <testResources>
+      <testResource>
+        <directory>src/test/resources</directory>
+      </testResource>
+    </testResources>
+    <testSourceDirectory>src/test</testSourceDirectory>
+
   </build>
 
 </project>
