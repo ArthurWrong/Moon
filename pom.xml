@@ -12,6 +12,7 @@
     <module>UDF</module>
     <module>JavaSelf</module>
     <module>DeltaLakeLearning</module>
+    <module>FlinkLearning</module>
   </modules>
 
   <name>JavaLearning</name>
